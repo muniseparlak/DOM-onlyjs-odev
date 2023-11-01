@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <title>Responsive Menü</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm p-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler openBtn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onclick="openNav()"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Service</a>
+            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6 p-4">
+          <h4>1.Sorunun Cevabı</h4>
+          <p>
+            <span>'News, Contact, About'</span> bölümü
+            <span> 'myLinks'</span> id'li div içerisinde yer almaktadır ve css
+            style nde display:none olarak yani görünmez olarak tanımlanmaktadır.
+            <br />
+            'fa fa-bars' class olan <span>i</span> etiketine onclick
+            eklenmiştir, yani butona click olduğunda fonksiyon gerçekleşmesinin
+            sağlanması için.
+            <br />
+            script etiketleri içinde ise i etiketinin yer aldığı butona verilmiş olan fonksiyon
+            tanımlanır. <span> 1. aşama :</span> 'myLinks' id li div etiketi id
+            si ile seçilir, daha sonra if-else yapısı ile fonksiyon tanımlanır.
+            <span> 2. aşama : </span>Fonksiyonda eğer style block ise none 'a
+            çevir(yani görünür ise görünmez yap), eğer none ise de block' a
+            çevir olarak tanımlanmış if-else yapısı yer alır.
+          </p>
+        </div>
+        <div class="col-lg-6 p-4">
+          <h4>2.Sorunun Cevabı</h4>
+          <p>
+            Responsive açılır kapanır navbar için; bu projede de yaptığım gibi
+            bootstrap ten gerekli navbar bölümünü aldım ama js linkini kopyalamadım, 'sm' ekrandan küçük
+            olacak şekilde 'fa fa-bars' class ı olan i etiketini ekledim ve i
+            etiketinin de içinde yer aldığı button a fonksiyon ekledim,
+            fonksiyonu da script.js dosyasında tanımladım. Fonksiyonda eğer
+            click işlemi olursa style in 100% olmasını istedim, yeni
+            oluşturduğum menü sayfasında ise bu sefer close(i) etiketinin yer aldığı butona
+            tıklandığında sayfanın kaybolması için fonksiyon ekledim.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Navbar responsive sayfası-->
+    <div class="overlay">
+      <a href="#" class="closeBtn" onclick="closeNav()"
+        ><i class="fa fa-times"></i
+      ></a>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVİCES</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+
+   
+    <script src="app.js"></script>
+  </body>
+</html>
